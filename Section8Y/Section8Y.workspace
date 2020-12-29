@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Section8Y" Database="" Version="10000">
+  <Project Name="Expressions" Path="Expressions/Expressions.project" Active="No"/>
+  <Project Name="euros" Path="euros/euros.project" Active="No"/>
+  <Project Name="increment_decrement" Path="increment_decrement/increment_decrement.project" Active="No"/>
+  <Project Name="EqualityOperators" Path="EqualityOperators/EqualityOperators.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="Expressions" ConfigName="Debug"/>
+      <Project Name="euros" ConfigName="Debug"/>
+      <Project Name="increment_decrement" ConfigName="Debug"/>
+      <Project Name="EqualityOperators" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="Expressions" ConfigName="Release"/>
+      <Project Name="euros" ConfigName="Release"/>
+      <Project Name="increment_decrement" ConfigName="Release"/>
+      <Project Name="EqualityOperators" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

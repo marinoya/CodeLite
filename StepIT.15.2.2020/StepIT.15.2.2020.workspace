@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="StepIT.15.2.2020" Database="" Version="10000">
+  <Project Name="X_Drawing" Path="X_Drawing/X_Drawing.project" Active="No"/>
+  <Project Name="Ex2" Path="Ex2/Ex2.project" Active="No"/>
+  <Project Name="Homework.for.holidays" Path="Homework.for.holidays/Homework.for.holidays.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="X_Drawing" ConfigName="Debug"/>
+      <Project Name="Ex2" ConfigName="Debug"/>
+      <Project Name="Homework.for.holidays" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="X_Drawing" ConfigName="Release"/>
+      <Project Name="Ex2" ConfigName="Release"/>
+      <Project Name="Homework.for.holidays" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

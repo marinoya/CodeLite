@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="StepIT.01.12.2020" Database="" Version="10000">
+  <Project Name="While" Path="While/While.project" Active="No"/>
+  <Project Name="doWhile" Path="doWhile/doWhile.project" Active="No"/>
+  <Project Name="Homework" Path="Homework/Homework.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="While" ConfigName="Debug"/>
+      <Project Name="doWhile" ConfigName="Debug"/>
+      <Project Name="Homework" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="While" ConfigName="Release"/>
+      <Project Name="doWhile" ConfigName="Release"/>
+      <Project Name="Homework" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

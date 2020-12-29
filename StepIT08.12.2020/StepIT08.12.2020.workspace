@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="StepIT08.12.2020" Database="" Version="10000">
+  <Project Name="For" Path="For/For.project" Active="No"/>
+  <Project Name="NestedFor" Path="NestedFor/NestedFor.project" Active="No"/>
+  <Project Name="Homework-08-12-2020" Path="Homework-08-12-2020/Homework-08-12-2020.project" Active="No"/>
+  <Project Name="Homework-08-12-2020-V2" Path="Homework-08-12-2020-V2/Homework-08-12-2020-V2.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="For" ConfigName="Debug"/>
+      <Project Name="NestedFor" ConfigName="Debug"/>
+      <Project Name="Homework-08-12-2020" ConfigName="Debug"/>
+      <Project Name="Homework-08-12-2020-V2" ConfigName="Debug"/>
+      <Project Name="Homework-08-12-2020-V2.1" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="For" ConfigName="Release"/>
+      <Project Name="NestedFor" ConfigName="Release"/>
+      <Project Name="Homework-08-12-2020" ConfigName="Release"/>
+      <Project Name="Homework-08-12-2020-V2" ConfigName="Release"/>
+      <Project Name="Homework-08-12-2020-V2.1" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

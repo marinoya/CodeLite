@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Section7Y" Database="" Version="10000">
+  <Project Name="ArraysDeclaringInitializingAccessing" Path="ArraysDeclaringInitializingAccessing/ArraysDeclaringInitializingAccessing.project" Active="No"/>
+  <Project Name="Vectors" Path="Vectors/Vectors.project" Active="No"/>
+  <Project Name="Homework24Nov" Path="Homework24Nov/Homework24Nov.project" Active="No"/>
+  <Project Name="Section7YChallange" Path="Section7YChallange/Section7YChallange.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="ArraysDeclaringInitializingAccessing" ConfigName="Debug"/>
+      <Project Name="Vectors" ConfigName="Debug"/>
+      <Project Name="Homework24Nov" ConfigName="Debug"/>
+      <Project Name="Section7YChallange" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="ArraysDeclaringInitializingAccessing" ConfigName="Release"/>
+      <Project Name="Vectors" ConfigName="Release"/>
+      <Project Name="Homework24Nov" ConfigName="Release"/>
+      <Project Name="Section7YChallange" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
