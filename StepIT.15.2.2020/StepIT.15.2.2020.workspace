@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="StepIT.15.2.2020" Database="" Version="10000">
   <Project Name="X_Drawing" Path="X_Drawing/X_Drawing.project" Active="No"/>
-  <Project Name="Homework.for.holidays" Path="Homework.for.holidays/Homework.for.project" Active="No"/>
-  <Project Name="Ex2" Path="Ex2/Ex2.project" Active="Yes"/>
+  <Project Name="Homework.for.holidays" Path="Homework.for.holidays/Homework.for.project" Active="Yes"/>
+  <Project Name="Ex2" Path="Ex2/Ex2.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
