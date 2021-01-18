@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Homework01.12.21" Database="" Version="10000">
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="Homework01.12.21" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="Homework01.12.21" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

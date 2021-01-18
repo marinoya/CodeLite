@@ -29,20 +29,35 @@ int main() {
 //    cout<< "num2 is "<< num2<< endl;
 //    
 //    
-    int total {0};
-    int num1{}, num2 {}, num3 {};
-    const int count {3};
-    cout << "enter 3 integers separated by spaces: ";
-    cin>> num1 >> num2 >> num3;
-    
-    total = num1 + num2 + num3;
-    double average {0.0};
-    average = total / static_cast<double>(count);
-    cout <<"the 3 number were :" << num1<<","<<num2<<","<<num3<<endl;
-    cout << "the sum of the 3 numers is :"<< total<<endl;
-    cout << "the average of the numbers is :"<< average<< endl;
-    cout<< endl;
-    
+//    int total {0};
+//    int num1{}, num2 {}, num3 {};
+//    const int count {3};
+//    cout << "enter 3 integers separated by spaces: ";
+//    cin>> num1 >> num2 >> num3;
+//    
+//    total = num1 + num2 + num3;
+//    double average {0.0};
+//    average = total / static_cast<double>(count);
+//    cout <<"the 3 number were :" << num1<<","<<num2<<","<<num3<<endl;
+//    cout << "the sum of the 3 numers is :"<< total<<endl;
+//    cout << "the average of the numbers is :"<< average<< endl;
+//    cout<< endl;
+
+bool equal_result {false};
+bool not_equal_result {false};
+int num1{}, num2{};
+
+cout << boolalpha;
+
+cout<< "Enter two integeres separated by a space: ";
+cin>> num1 >> num2;\
+equal_result = (num1 == num2);
+not_equal_result = (num1 != num2);
+cout << "Comparieon result (equals) : " << equal_result <<endl;
+cout << "Comparison result (not eequals) " <<not_equal_result << endl;
+
+char char1{}, char2{};
+cout<<
     
     
     
