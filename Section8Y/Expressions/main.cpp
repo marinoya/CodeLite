@@ -63,3 +63,30 @@ cout<<
     
     return 0;
 }
+
+
+//
+//
+//int x = 10, y = 3, z = 6;
+//cout << (x == y) << " "; 			0
+//cout << (z <= x) << " "; 			1
+//cout << (y != z) << " "; 			1
+//cout << (x > y && z < x) << " ";	1
+//cout << (y < x && z < x) << " ";	1
+//cout << (x < y || z < 0) << endl;	0
+//
+//
+//int x= 5;
+//int y= -2;
+//int z = 2;
+//cout << (x + (y * z) <= x + (z * z) - x) << endl;
+//1 <= 4
+//
+//What are the values of x and y after the following code executes?
+//
+//double  a = 100;
+//int b = 12;
+//int x = b % 3; 0
+//double  y = a / b;  8.333333333333333
+//int z = a / b; 8
+

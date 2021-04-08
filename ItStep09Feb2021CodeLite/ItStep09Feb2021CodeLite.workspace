@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="ItStep09Feb2021CodeLite" Database="" Version="10000">
+  <Project Name="ItStep09Feb2021" Path="ItStep09Feb2021/ItStep09Feb2021.project" Active="Yes"/>
+  <Project Name="ItStep09Feb2021Pointers" Path="ItStep09Feb2021Pointers/ItStep09Feb2021Pointers.project" Active="No"/>
+  <Project Name="ItStep09Feb2021Homework" Path="ItStep09Feb2021Homework/ItStep09Feb2021Homework.project" Active="No"/>
+  <Project Name="ItStep09Feb2021Homework2" Path="ItStep09Feb2021Homework2/ItStep09Feb2021Homework2.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="ItStep09Feb2021" ConfigName="Debug"/>
+      <Project Name="ItStep09Feb2021Pointers" ConfigName="Debug"/>
+      <Project Name="ItStep09Feb2021Homework" ConfigName="Debug"/>
+      <Project Name="ItStep09Feb2021Homework2" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="ItStep09Feb2021" ConfigName="Release"/>
+      <Project Name="ItStep09Feb2021Pointers" ConfigName="Release"/>
+      <Project Name="ItStep09Feb2021Homework" ConfigName="Release"/>
+      <Project Name="ItStep09Feb2021Homework2" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

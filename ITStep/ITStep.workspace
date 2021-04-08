@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="ITStep" Database="" Version="10000">
-  <Project Name="17Nov2020" Path="17Nov2020/17Nov2020.project" Active="No"/>
+  <Project Name="17Nov2020" Path="17Nov2020/17Nov2020.project" Active="Yes"/>
   <Project Name="17Nov2020Operators" Path="17Nov2020Operators/17Nov2020Operators.project" Active="No"/>
   <Project Name="Homework17Nov2020" Path="Homework17Nov2020/Homework17Nov2020.project" Active="No"/>
-  <Project Name="Homework12Jan2021" Path="Homework12Jan2021/Homework12Jan2021.project" Active="Yes"/>
+  <Project Name="Homework12Jan2021" Path="Homework12Jan2021/Homework12Jan2021.project" Active="No"/>
+  <Project Name="19Jan2021" Path="19Jan2021/19Jan2021.project" Active="No"/>
+  <Project Name="Homwework19Jan2021" Path="Homwework19Jan2021/Homwework19Jan2021.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -11,6 +13,8 @@
       <Project Name="17Nov2020Operators" ConfigName="Debug"/>
       <Project Name="Homework17Nov2020" ConfigName="Debug"/>
       <Project Name="Homework12Jan2021" ConfigName="Debug"/>
+      <Project Name="19Jan2021" ConfigName="Debug"/>
+      <Project Name="Homwework19Jan2021" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -18,6 +22,8 @@
       <Project Name="17Nov2020Operators" ConfigName="Release"/>
       <Project Name="Homework17Nov2020" ConfigName="Release"/>
       <Project Name="Homework12Jan2021" ConfigName="Release"/>
+      <Project Name="19Jan2021" ConfigName="Release"/>
+      <Project Name="Homwework19Jan2021" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

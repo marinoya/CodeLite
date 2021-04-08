@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="ItStep09March20213" Database="" Version="10000">
+  <Project Name="Pregovor" Path="Pregovor/Pregovor.project" Active="No"/>
+  <Project Name="Weird" Path="Weird/Weird.project" Active="No"/>
+  <Project Name="ArraysWithPointers" Path="ArraysWithPointers/ArraysWithPointers.project" Active="No"/>
+  <Project Name="Test" Path="Test/Test.project" Active="No"/>
+  <Project Name="temp" Path="temp/temp.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="Pregovor" ConfigName="Debug"/>
+      <Project Name="Weird" ConfigName="Debug"/>
+      <Project Name="ArraysWithPointers" ConfigName="Debug"/>
+      <Project Name="Test" ConfigName="Debug"/>
+      <Project Name="temp" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="Pregovor" ConfigName="Release"/>
+      <Project Name="Weird" ConfigName="Release"/>
+      <Project Name="ArraysWithPointers" ConfigName="Release"/>
+      <Project Name="Test" ConfigName="Release"/>
+      <Project Name="temp" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

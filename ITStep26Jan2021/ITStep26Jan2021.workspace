@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="ITStep26Jan2021" Database="" Version="10000">
+  <Project Name="ITStep26Jan2021" Path="ITStep26Jan2021/ITStep26Jan2021.project" Active="Yes"/>
+  <Project Name="ITStep26Jan2021Homework" Path="ITStep26Jan2021Homework/ITStep26Jan2021Homework.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="ITStep26Jan2021" ConfigName="Debug"/>
+      <Project Name="ITStep26Jan2021Homework" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="ITStep26Jan2021" ConfigName="Release"/>
+      <Project Name="ITStep26Jan2021Homework" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

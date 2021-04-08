@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Section8Y" Database="" Version="10000">
-  <Project Name="Expressions" Path="Expressions/Expressions.project" Active="Yes"/>
+  <Project Name="Expressions" Path="Expressions/Expressions.project" Active="No"/>
   <Project Name="euros" Path="euros/euros.project" Active="No"/>
   <Project Name="increment_decrement" Path="increment_decrement/increment_decrement.project" Active="No"/>
   <Project Name="EqualityOperators" Path="EqualityOperators/EqualityOperators.project" Active="No"/>
   <Project Name="relationalOperators" Path="relationalOperators/relationalOperators.project" Active="No"/>
+  <Project Name="LogicAndOperators" Path="LogicAndOperators/LogicAndOperators.project" Active="No"/>
+  <Project Name="Section8YChallange" Path="Section8YChallange/Section8YChallange.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -13,6 +15,8 @@
       <Project Name="increment_decrement" ConfigName="Debug"/>
       <Project Name="EqualityOperators" ConfigName="Debug"/>
       <Project Name="relationalOperators" ConfigName="Debug"/>
+      <Project Name="LogicAndOperators" ConfigName="Debug"/>
+      <Project Name="Section8YChallange" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -21,6 +25,8 @@
       <Project Name="increment_decrement" ConfigName="Release"/>
       <Project Name="EqualityOperators" ConfigName="Release"/>
       <Project Name="relationalOperators" ConfigName="Release"/>
+      <Project Name="LogicAndOperators" ConfigName="Release"/>
+      <Project Name="Section8YChallange" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

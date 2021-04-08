@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Expressions - Debug ]----------"
-	@cd "Expressions" && "$(MAKE)" -f  "Expressions.mk"
+	@echo "----------Building project:[ Section8YChallange - Debug ]----------"
+	@cd "Section8YChallange" && "$(MAKE)" -f  "Section8YChallange.mk"
 clean:
-	@echo "----------Cleaning project:[ Expressions - Debug ]----------"
-	@cd "Expressions" && "$(MAKE)" -f  "Expressions.mk" clean
+	@echo "----------Cleaning project:[ Section8YChallange - Debug ]----------"
+	@cd "Section8YChallange" && "$(MAKE)" -f  "Section8YChallange.mk" clean

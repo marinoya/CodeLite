@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Section10Y" Database="" Version="10000">
+  <Project Name="CharMethods" Path="CharMethods/CharMethods.project" Active="No"/>
+  <Project Name="Stringd" Path="Stringd/Stringd.project" Active="No"/>
+  <Project Name="misc" Path="misc/misc.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="CharMethods" ConfigName="Debug"/>
+      <Project Name="Stringd" ConfigName="Debug"/>
+      <Project Name="misc" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="CharMethods" ConfigName="Release"/>
+      <Project Name="Stringd" ConfigName="Release"/>
+      <Project Name="misc" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

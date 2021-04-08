@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Homework01.12.21" Database="" Version="10000">
+  <Project Name="FinalX" Path="FinalX/FinalX.project" Active="Yes"/>
+  <Project Name="FinalX2" Path="FinalX2/FinalX2.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="Homework01.12.21" ConfigName="Debug"/>
+      <Project Name="FinalX" ConfigName="Debug"/>
+      <Project Name="FinalX2" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="Homework01.12.21" ConfigName="Release"/>
+      <Project Name="FinalX" ConfigName="Release"/>
+      <Project Name="FinalX2" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
