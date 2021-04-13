@@ -2,19 +2,28 @@
 <CodeLite_Workspace Name="Section10Y" Database="" Version="10000">
   <Project Name="CharMethods" Path="CharMethods/CharMethods.project" Active="No"/>
   <Project Name="Stringd" Path="Stringd/Stringd.project" Active="No"/>
-  <Project Name="misc" Path="misc/misc.project" Active="Yes"/>
+  <Project Name="misc" Path="misc/misc.project" Active="No"/>
+  <Project Name="StringCplusplus" Path="StringCplusplus/StringCplusplus.project" Active="No"/>
+  <Project Name="SectionChallange" Path="SectionChallange/SectionChallange.project" Active="No"/>
+  <Project Name="assignment1" Path="assignment1/assignment1.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="CharMethods" ConfigName="Debug"/>
       <Project Name="Stringd" ConfigName="Debug"/>
       <Project Name="misc" ConfigName="Debug"/>
+      <Project Name="StringCplusplus" ConfigName="Debug"/>
+      <Project Name="SectionChallange" ConfigName="Debug"/>
+      <Project Name="assignment1" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="CharMethods" ConfigName="Release"/>
       <Project Name="Stringd" ConfigName="Release"/>
       <Project Name="misc" ConfigName="Release"/>
+      <Project Name="StringCplusplus" ConfigName="Release"/>
+      <Project Name="SectionChallange" ConfigName="Release"/>
+      <Project Name="assignment1" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
