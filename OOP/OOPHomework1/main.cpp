@@ -112,7 +112,7 @@ int main (){
 //	drawTopTriangle(8);
 	drawBottomTriangle(9);
 	drawTopAndBottomTriangle(8);
-	drawLeftTriangle(8);
+	drawLeftTriangle(9);
 	
 	return 0;
 	}

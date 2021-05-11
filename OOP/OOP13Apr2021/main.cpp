@@ -44,7 +44,7 @@ private:
 	
 };
 
-//creaTE A CLASS BY CHOISE
+//excersize - create a class of your own
 
 //class Wizard
 //{
@@ -105,7 +105,7 @@ int main (){
 	//cout << "Hello world" << endl;
 	
 	Barbarian pesho;
-	pesho.name = "Pesho";
+	pesho.name = "Pesho"; 
 	pesho.attackPts = 20;
 	pesho.attack();
 	//cout << pesho.gold()<< endl;

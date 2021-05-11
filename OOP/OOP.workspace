@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="OOP" Database="" Version="10000">
   <Project Name="OOP13Apr2021" Path="OOP13Apr2021/OOP13Apr2021.project" Active="No"/>
-  <Project Name="OOPHomework1" Path="OOPHomework1/OOPHomework1.project" Active="Yes"/>
+  <Project Name="OOPHomework1" Path="OOPHomework1/OOPHomework1.project" Active="No"/>
+  <Project Name="OOP22Apr2021" Path="OOP22Apr2021/OOP22Apr2021.project" Active="No"/>
+  <Project Name="PointersByJavidx9" Path="PointersByJavidx9/PointersByJavidx9.project" Active="No"/>
+  <Project Name="OOP27Apr2021" Path="OOP27Apr2021/OOP27Apr2021.project" Active="No"/>
+  <Project Name="OOP11May2021" Path="OOP11May2021/OOP11May2021.project" Active="No"/>
+  <Project Name="OOPHomework2" Path="OOPHomework2/OOPHomework2.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="OOP13Apr2021" ConfigName="Debug"/>
       <Project Name="OOPHomework1" ConfigName="Debug"/>
+      <Project Name="OOP22Apr2021" ConfigName="Debug"/>
+      <Project Name="PointersByJavidx9" ConfigName="Debug"/>
+      <Project Name="OOP27Apr2021" ConfigName="Debug"/>
+      <Project Name="OOP11May2021" ConfigName="Debug"/>
+      <Project Name="OOPHomework2" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="OOP13Apr2021" ConfigName="Release"/>
       <Project Name="OOPHomework1" ConfigName="Release"/>
+      <Project Name="OOP22Apr2021" ConfigName="Release"/>
+      <Project Name="PointersByJavidx9" ConfigName="Release"/>
+      <Project Name="OOP27Apr2021" ConfigName="Release"/>
+      <Project Name="OOP11May2021" ConfigName="Release"/>
+      <Project Name="OOPHomework2" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
