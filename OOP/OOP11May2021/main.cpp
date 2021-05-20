@@ -62,7 +62,7 @@ class Dwarf
 	
 	Profession prof;
 
-	enum heritage 
+	enum Heritage 
 	{
 		hill, 
 		mountain, 
@@ -70,7 +70,8 @@ class Dwarf
 	};
 	
 public:	
-	heritage her;
+
+	Heritage her;
 	
 	//default constructor
 	Dwarf ()
@@ -79,13 +80,13 @@ public:
 	}
 		
 	//param constructor
-	Dwarf (string _name, int _age /*,enum _heritage*/):name(_name), age(_age)//, heritage(_heritage) 
+	Dwarf (string _name, int _age /*,enum _Heritage*/):name(_name), age(_age)//, Heritage(_Heritage) 
 	{
 		cout << "I'm a parametrized constructor and have data" << endl;
 	}
 	
 	//copy constructor
-	Dwarf (const Dwarf &d1):name(name), age(age)//, heritage(_heritage) 
+	Dwarf (const Dwarf &d1):name(name), age(age)//, Heritage(_Heritage) 
 	{
 		cout << "I'm a copy constructor" << endl;
 	}
@@ -100,7 +101,7 @@ public:
 		this->age = age;
 	}
 	
-	void setHeritage (heritage her)
+	void setHeritage (Heritage her)
 	{
 		this -> her = her;
 	}
