@@ -10,17 +10,27 @@ private:
 public:
 	int legs{};
 	bool hasTail{};
+	Animal (bool canSwim, int legs, bool hasTail){
+		this->legs = legs;
+		this->hasTail = hasTail;
+	};
+	
+	void procreate(){cout<<"make offspring"<<endl;}
+	
+	~Animal(){cout<<"Animal ends"<<endl;};
 	
 };
 
 
-class Mammal {
+class Mammal : public Animal{
+private:
+	
+public:
 	
 	
+	Mammal(){};
 	
-	
-	
-	
+	~Mammal(){cout<<"Mammal ends"<<endl;};
 };
 
 
@@ -28,7 +38,7 @@ class Mammal {
 
 
 
-class Dog {
+class Dog : public Mammal{
 private:
 	string name{};
 public:
