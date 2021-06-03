@@ -7,7 +7,11 @@
   <Project Name="OOP27Apr2021" Path="OOP27Apr2021/OOP27Apr2021.project" Active="No"/>
   <Project Name="OOP11May2021" Path="OOP11May2021/OOP11May2021.project" Active="No"/>
   <Project Name="OOPHomework2" Path="OOPHomework2/OOPHomework2.project" Active="No"/>
-  <Project Name="OOP20May2021" Path="OOP20May2021/OOP20May2021.project" Active="Yes"/>
+  <Project Name="OOP20May2021" Path="OOP20May2021/OOP20May2021.project" Active="No"/>
+  <Project Name="OOP25May2021" Path="OOP25May2021/OOP25May2021.project" Active="No"/>
+  <Project Name="OOP03June2021" Path="OOP03June2021/OOP03June2021.project" Active="No"/>
+  <Project Name="OOP03June2021Part2" Path="OOP03June2021Part2/OOP03June2021Part2.project" Active="Yes"/>
+  <Project Name="OOP03June2021Part3" Path="OOP03June2021Part3/OOP03June2021Part3.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -19,6 +23,10 @@
       <Project Name="OOP11May2021" ConfigName="Debug"/>
       <Project Name="OOPHomework2" ConfigName="Debug"/>
       <Project Name="OOP20May2021" ConfigName="Debug"/>
+      <Project Name="OOP25May2021" ConfigName="Debug"/>
+      <Project Name="OOP03June2021" ConfigName="Debug"/>
+      <Project Name="OOP03June2021Part2" ConfigName="Debug"/>
+      <Project Name="OOP03June2021Part3" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -30,6 +38,10 @@
       <Project Name="OOP11May2021" ConfigName="Release"/>
       <Project Name="OOPHomework2" ConfigName="Release"/>
       <Project Name="OOP20May2021" ConfigName="Release"/>
+      <Project Name="OOP25May2021" ConfigName="Release"/>
+      <Project Name="OOP03June2021" ConfigName="Release"/>
+      <Project Name="OOP03June2021Part2" ConfigName="Release"/>
+      <Project Name="OOP03June2021Part3" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

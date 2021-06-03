@@ -9,7 +9,7 @@ using namespace std;
 	//selection operator '->' (only with pointers)
 	//this
 	//Constant objects - const obj can't call non-const methods
-	//member initializer list - specialniia constructor
+	//member initializer list - specialnia constructor
 	//if it can be made a constant - make it a cosntant - less trouble in the future(good practice)
 	//composition - segmenting objects into smaller parts
 	
