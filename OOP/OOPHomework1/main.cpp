@@ -11,7 +11,7 @@ void drawBottomRightTriangle(int size);
 void drawTopTriangle(int size);
 void drawBottomTriangle(int size);
 void drawTopAndBottomTriangle(int size);
-void drawLeftTriangle(int size);
+void drawLeftTriangle(int size);                                    
 
 //. Дадена е квадратна матрица от типа n (n редове, n
 //колони). Да се намери най-голямото от значенията на 

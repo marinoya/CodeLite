@@ -10,10 +10,15 @@ private:
 public:
 	int legs{};
 	bool hasTail{};
-	Animal (bool canSwim, int legs, bool hasTail){
-		this->legs = legs;
-		this->hasTail = hasTail;
+//	Animal (bool canSwim, int legs, bool hasTail){
+//		this->legs = legs;
+//		this->hasTail = hasTail;
+//	};
+	Animal(){};
+	Animal (bool canSwim, int legs, bool hasTail):canSwim(canSwim), legs(legs), hasTail(hasTail)
+	{
 	};
+
 	
 	void procreate(){cout<<"make offspring"<<endl;}
 	

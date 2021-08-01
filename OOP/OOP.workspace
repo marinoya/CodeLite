@@ -10,8 +10,17 @@
   <Project Name="OOP20May2021" Path="OOP20May2021/OOP20May2021.project" Active="No"/>
   <Project Name="OOP25May2021" Path="OOP25May2021/OOP25May2021.project" Active="No"/>
   <Project Name="OOP03June2021" Path="OOP03June2021/OOP03June2021.project" Active="No"/>
-  <Project Name="OOP03June2021Part2" Path="OOP03June2021Part2/OOP03June2021Part2.project" Active="Yes"/>
+  <Project Name="OOP03June2021Part2" Path="OOP03June2021Part2/OOP03June2021Part2.project" Active="No"/>
   <Project Name="OOP03June2021Part3" Path="OOP03June2021Part3/OOP03June2021Part3.project" Active="No"/>
+  <Project Name="OOP08June2021" Path="OOP06June2021/OOP06June2021.project" Active="No"/>
+  <Project Name="OOP08June2021Part2" Path="OOP08June2021Part2/OOP08June2021Part2.project" Active="No"/>
+  <Project Name="ticTacToe" Path="ticTacToe/ticTacToe.project" Active="No"/>
+  <Project Name="OOP15June2021" Path="OOP15June2021/OOP15June2021.project" Active="No"/>
+  <Project Name="OOP22june2021" Path="OOP22june2021/OOP22june2021.project" Active="No"/>
+  <Project Name="OOP29June2021" Path="OOP29June2021/OOP29June2021.project" Active="No"/>
+  <Project Name="FinalOOP" Path="FinalOOP/FinalOOP.project" Active="No"/>
+  <Project Name="Codewars_6__Which_are_in" Path="test/test.project" Active="Yes"/>
+  <Project Name="reverse_iterator" Path="reverse_iterator/reverse_iterator.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -27,6 +36,15 @@
       <Project Name="OOP03June2021" ConfigName="Debug"/>
       <Project Name="OOP03June2021Part2" ConfigName="Debug"/>
       <Project Name="OOP03June2021Part3" ConfigName="Debug"/>
+      <Project Name="OOP08June2021" ConfigName="Debug"/>
+      <Project Name="OOP08June2021Part2" ConfigName="Debug"/>
+      <Project Name="ticTacToe" ConfigName="Debug"/>
+      <Project Name="OOP15June2021" ConfigName="Debug"/>
+      <Project Name="OOP22june2021" ConfigName="Debug"/>
+      <Project Name="OOP29June2021" ConfigName="Debug"/>
+      <Project Name="FinalOOP" ConfigName="Debug"/>
+      <Project Name="Codewars_6__Which_are_in" ConfigName="Debug"/>
+      <Project Name="reverse_iterator" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -42,6 +60,15 @@
       <Project Name="OOP03June2021" ConfigName="Release"/>
       <Project Name="OOP03June2021Part2" ConfigName="Release"/>
       <Project Name="OOP03June2021Part3" ConfigName="Release"/>
+      <Project Name="OOP08June2021" ConfigName="Release"/>
+      <Project Name="OOP08June2021Part2" ConfigName="Release"/>
+      <Project Name="ticTacToe" ConfigName="Release"/>
+      <Project Name="OOP15June2021" ConfigName="Release"/>
+      <Project Name="OOP22june2021" ConfigName="Release"/>
+      <Project Name="OOP29June2021" ConfigName="Release"/>
+      <Project Name="FinalOOP" ConfigName="Release"/>
+      <Project Name="Codewars_6__Which_are_in" ConfigName="Release"/>
+      <Project Name="reverse_iterator" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

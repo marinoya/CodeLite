@@ -20,7 +20,7 @@ public:
 	void sayOhayo(){
 		cout << "Ohayo!" << endl;
 	}
-	~Father(){cout<<"father killed"<<endl;};
+	~Father(){cout<<"father killed"<<endl;}; 
 
 
 	
