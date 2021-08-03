@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ 05FunctionParameters - Debug ]----------"
-	@cd "05FunctionParameters" && "$(MAKE)" -f  "05FunctionParameters.mk"
+	@echo "----------Building project:[ 07FunctionOverloading - Debug ]----------"
+	@cd "07FunctionOverloading" && "$(MAKE)" -f  "07FunctionOverloading.mk"
 clean:
-	@echo "----------Cleaning project:[ 05FunctionParameters - Debug ]----------"
-	@cd "05FunctionParameters" && "$(MAKE)" -f  "05FunctionParameters.mk" clean
+	@echo "----------Cleaning project:[ 07FunctionOverloading - Debug ]----------"
+	@cd "07FunctionOverloading" && "$(MAKE)" -f  "07FunctionOverloading.mk" clean

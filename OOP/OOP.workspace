@@ -19,8 +19,10 @@
   <Project Name="OOP22june2021" Path="OOP22june2021/OOP22june2021.project" Active="No"/>
   <Project Name="OOP29June2021" Path="OOP29June2021/OOP29June2021.project" Active="No"/>
   <Project Name="FinalOOP" Path="FinalOOP/FinalOOP.project" Active="No"/>
-  <Project Name="Codewars_6__Which_are_in" Path="test/test.project" Active="Yes"/>
+  <Project Name="Codewars_6__Which_are_in" Path="test/test.project" Active="No"/>
   <Project Name="reverse_iterator" Path="reverse_iterator/reverse_iterator.project" Active="No"/>
+  <Project Name="Chess" Path="Chess/Chess.project" Active="Yes"/>
+  <Project Name="new" Path="new/new.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -45,6 +47,8 @@
       <Project Name="FinalOOP" ConfigName="Debug"/>
       <Project Name="Codewars_6__Which_are_in" ConfigName="Debug"/>
       <Project Name="reverse_iterator" ConfigName="Debug"/>
+      <Project Name="Chess" ConfigName="Debug"/>
+      <Project Name="new" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -69,6 +73,8 @@
       <Project Name="FinalOOP" ConfigName="Release"/>
       <Project Name="Codewars_6__Which_are_in" ConfigName="Release"/>
       <Project Name="reverse_iterator" ConfigName="Release"/>
+      <Project Name="Chess" ConfigName="Release"/>
+      <Project Name="new" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

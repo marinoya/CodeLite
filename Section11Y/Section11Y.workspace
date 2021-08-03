@@ -4,7 +4,9 @@
   <Project Name="Random" Path="Random/Random.project" Active="No"/>
   <Project Name="FunctionsDefinition" Path="FunctionsDefinition/FunctionsDefinition.project" Active="No"/>
   <Project Name="04FunctionPrototypes" Path="04FunctionPrototypes/04FunctionPrototypes.project" Active="No"/>
-  <Project Name="05FunctionParameters" Path="05FunctionParameters/05FunctionParameters.project" Active="Yes"/>
+  <Project Name="05FunctionParameters" Path="05FunctionParameters/05FunctionParameters.project" Active="No"/>
+  <Project Name="06DefaultArguments" Path="06DefaultArguments/06DefaultArguments.project" Active="No"/>
+  <Project Name="07FunctionOverloading" Path="07FunctionOverloading/07FunctionOverloading.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -13,6 +15,8 @@
       <Project Name="FunctionsDefinition" ConfigName="Debug"/>
       <Project Name="04FunctionPrototypes" ConfigName="Debug"/>
       <Project Name="05FunctionParameters" ConfigName="Debug"/>
+      <Project Name="06DefaultArguments" ConfigName="Debug"/>
+      <Project Name="07FunctionOverloading" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -21,6 +25,8 @@
       <Project Name="FunctionsDefinition" ConfigName="Release"/>
       <Project Name="04FunctionPrototypes" ConfigName="Release"/>
       <Project Name="05FunctionParameters" ConfigName="Release"/>
+      <Project Name="06DefaultArguments" ConfigName="Release"/>
+      <Project Name="07FunctionOverloading" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

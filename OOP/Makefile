@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Codewars_6__Which_are_in - Debug ]----------"
-	@cd "test" && "$(MAKE)" -f  "Codewars_6__Which_are_in.mk"
+	@echo "----------Building project:[ Chess - Debug ]----------"
+	@cd "Chess" && "$(MAKE)" -f  "Chess.mk"
 clean:
-	@echo "----------Cleaning project:[ Codewars_6__Which_are_in - Debug ]----------"
-	@cd "test" && "$(MAKE)" -f  "Codewars_6__Which_are_in.mk" clean
+	@echo "----------Cleaning project:[ Chess - Debug ]----------"
+	@cd "Chess" && "$(MAKE)" -f  "Chess.mk" clean
