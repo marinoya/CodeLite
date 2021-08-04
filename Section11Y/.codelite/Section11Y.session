@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\CodeLite\Section11Y\Section11Y.workspace">
-  <int Value="6" Name="m_selectedTab"/>
+  <int Value="11" Name="m_selectedTab"/>
   <wxString Value="C:\CodeLite\Section11Y\Section11Y.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="C:\CodeLite\Section11Y\Math\main.cpp" Name="FileName"/>
-      <int Value="42" Name="FirstVisibleLine"/>
+      <int Value="21" Name="FirstVisibleLine"/>
       <int Value="22" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\Section11Y\Random\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="44" Name="FirstVisibleLine"/>
       <int Value="45" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\Section11Y\FunctionsDefinition\main.cpp" Name="FileName"/>
-      <int Value="9" Name="FirstVisibleLine"/>
+      <int Value="20" Name="FirstVisibleLine"/>
       <int Value="21" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\Section11Y\04FunctionPrototypes\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="13" Name="FirstVisibleLine"/>
       <int Value="14" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\Section11Y\05FunctionParameters\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="55" Name="FirstVisibleLine"/>
       <int Value="56" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\Section11Y\06DefaultArguments\main.cpp" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
-      <int Value="42" Name="CurrentLine"/>
+      <int Value="3" Name="FirstVisibleLine"/>
+      <int Value="3" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -49,6 +49,41 @@
       <wxString Value="C:\CodeLite\Section11Y\07FunctionOverloading\main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="11" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\CodeLite\Section11Y\08PassByReference\main.cpp" Name="FileName"/>
+      <int Value="48" Name="FirstVisibleLine"/>
+      <int Value="60" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\CodeLite\Section11Y\09ScopeRules\main.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="24" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\CodeLite\Section11Y\10FunctionCallStack\main.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="16" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\CodeLite\Section11Y\11RecursiveFunctions\main.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="12" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\CodeLite\Section11Y\Section11YChallange\main.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="6" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

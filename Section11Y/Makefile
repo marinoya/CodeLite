@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ 07FunctionOverloading - Debug ]----------"
-	@cd "07FunctionOverloading" && "$(MAKE)" -f  "07FunctionOverloading.mk"
+	@echo "----------Building project:[ 11RecursiveFunctions - Debug ]----------"
+	@cd "11RecursiveFunctions" && "$(MAKE)" -f  "11RecursiveFunctions.mk"
 clean:
-	@echo "----------Cleaning project:[ 07FunctionOverloading - Debug ]----------"
-	@cd "07FunctionOverloading" && "$(MAKE)" -f  "07FunctionOverloading.mk" clean
+	@echo "----------Cleaning project:[ 11RecursiveFunctions - Debug ]----------"
+	@cd "11RecursiveFunctions" && "$(MAKE)" -f  "11RecursiveFunctions.mk" clean

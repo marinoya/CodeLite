@@ -6,7 +6,12 @@
   <Project Name="04FunctionPrototypes" Path="04FunctionPrototypes/04FunctionPrototypes.project" Active="No"/>
   <Project Name="05FunctionParameters" Path="05FunctionParameters/05FunctionParameters.project" Active="No"/>
   <Project Name="06DefaultArguments" Path="06DefaultArguments/06DefaultArguments.project" Active="No"/>
-  <Project Name="07FunctionOverloading" Path="07FunctionOverloading/07FunctionOverloading.project" Active="Yes"/>
+  <Project Name="07FunctionOverloading" Path="07FunctionOverloading/07FunctionOverloading.project" Active="No"/>
+  <Project Name="08PassByReference" Path="08PassByReference/08PassByReference.project" Active="No"/>
+  <Project Name="09ScopeRules" Path="09ScopeRules/09ScopeRules.project" Active="No"/>
+  <Project Name="10FunctionCallStack" Path="10FunctionCallStack/10FunctionCallStack.project" Active="No"/>
+  <Project Name="11RecursiveFunctions" Path="11RecursiveFunctions/11RecursiveFunctions.project" Active="No"/>
+  <Project Name="Section11YChallange" Path="Section11YChallange/Section11YChallange.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -17,6 +22,11 @@
       <Project Name="05FunctionParameters" ConfigName="Debug"/>
       <Project Name="06DefaultArguments" ConfigName="Debug"/>
       <Project Name="07FunctionOverloading" ConfigName="Debug"/>
+      <Project Name="08PassByReference" ConfigName="Debug"/>
+      <Project Name="09ScopeRules" ConfigName="Debug"/>
+      <Project Name="10FunctionCallStack" ConfigName="Debug"/>
+      <Project Name="11RecursiveFunctions" ConfigName="Debug"/>
+      <Project Name="Section11YChallange" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -27,6 +37,11 @@
       <Project Name="05FunctionParameters" ConfigName="Release"/>
       <Project Name="06DefaultArguments" ConfigName="Release"/>
       <Project Name="07FunctionOverloading" ConfigName="Release"/>
+      <Project Name="08PassByReference" ConfigName="Release"/>
+      <Project Name="09ScopeRules" ConfigName="Release"/>
+      <Project Name="10FunctionCallStack" ConfigName="Release"/>
+      <Project Name="11RecursiveFunctions" ConfigName="Release"/>
+      <Project Name="Section11YChallange" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
