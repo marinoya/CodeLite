@@ -5,7 +5,7 @@
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="C:\CodeLite\OOP\OOPHomework1\main.cpp" Name="FileName"/>
-      <int Value="99" Name="FirstVisibleLine"/>
+      <int Value="6" Name="FirstVisibleLine"/>
       <int Value="7" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds">
@@ -43,45 +43,34 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\OOP\test\main.cpp" Name="FileName"/>
-      <int Value="21" Name="FirstVisibleLine"/>
+      <int Value="38" Name="FirstVisibleLine"/>
       <int Value="39" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\OOP\reverse_iterator\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="7" Name="FirstVisibleLine"/>
       <int Value="8" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\OOP\FinalOOP\main.cpp" Name="FileName"/>
-      <int Value="167" Name="FirstVisibleLine"/>
+      <int Value="182" Name="FirstVisibleLine"/>
       <int Value="183" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\OOP\Chess\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="16" Name="CurrentLine"/>
+      <int Value="287" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds">
-        <IntVectorItem Value="38"/>
-        <IntVectorItem Value="46"/>
-        <IntVectorItem Value="52"/>
-        <IntVectorItem Value="58"/>
-        <IntVectorItem Value="64"/>
-        <IntVectorItem Value="72"/>
-        <IntVectorItem Value="80"/>
-        <IntVectorItem Value="100"/>
-        <IntVectorItem Value="108"/>
-        <IntVectorItem Value="121"/>
-        <IntVectorItem Value="139"/>
-        <IntVectorItem Value="162"/>
-        <IntVectorItem Value="177"/>
-        <IntVectorItem Value="187"/>
+        <IntVectorItem Value="322"/>
+        <IntVectorItem Value="332"/>
+        <IntVectorItem Value="365"/>
       </IntVector>
     </TabInfo>
     <TabInfo>
@@ -93,7 +82,7 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\CodeLite\OOP\new\main.cpp" Name="FileName"/>
-      <int Value="6" Name="FirstVisibleLine"/>
+      <int Value="20" Name="FirstVisibleLine"/>
       <int Value="21" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>

@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\CodeLite\Section12Y\Section12Y.workspace">
-  <int Value="0" Name="m_selectedTab"/>
+  <int Value="2" Name="m_selectedTab"/>
   <wxString Value="C:\CodeLite\Section12Y\Section12Y.workspace" Name="m_workspaceName"/>
-  <TabInfoArray Name="TabInfoArray"/>
+  <TabInfoArray Name="TabInfoArray">
+    <TabInfo>
+      <wxString Value="C:\CodeLite\Section12Y\01PointerVariable\main.cpp" Name="FileName"/>
+      <int Value="46" Name="FirstVisibleLine"/>
+      <int Value="55" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\CodeLite\Section12Y\02Dereferencing\main.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="57" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\CodeLite\Section12Y\Nothing_please_delete\main.cpp" Name="FileName"/>
+      <int Value="60" Name="FirstVisibleLine"/>
+      <int Value="91" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds">
+        <IntVectorItem Value="66"/>
+        <IntVectorItem Value="68"/>
+        <IntVectorItem Value="168"/>
+        <IntVectorItem Value="191"/>
+        <IntVectorItem Value="205"/>
+        <IntVectorItem Value="219"/>
+        <IntVectorItem Value="252"/>
+        <IntVectorItem Value="371"/>
+      </IntVector>
+    </TabInfo>
+  </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
     <long Value="0" Name="Count"/>
   </SerializedObject>

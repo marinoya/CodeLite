@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Workspace Name="Section12Y" Database="" Version="10000"/>
+<CodeLite_Workspace Name="Section12Y" Database="" Version="10000">
+  <Project Name="01PointerVariable" Path="01PointerVariable/01PointerVariable.project" Active="No"/>
+  <Project Name="02Dereferencing" Path="02Dereferencing/02Dereferencing.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="01PointerVariable" ConfigName="Debug"/>
+      <Project Name="02Dereferencing" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="01PointerVariable" ConfigName="Release"/>
+      <Project Name="02Dereferencing" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

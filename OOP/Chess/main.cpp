@@ -7,6 +7,8 @@ char numberToCharConvertor(int);
 void alternate(Colour& c);
 int convert(int a);
 int convert(char a);
+bool canMoveBishop(int fromRank, char fromFile, int toRank, char toFile);
+string translateColour(Colour c);
 
 class Piece {
 public:
@@ -100,15 +102,19 @@ public:
 
 class Square {
 public:
+	//members
 	int rank;
 	char file;
 	Colour colour;
+	Piece* piece = nullptr;
 	//constructors  
 	Square() {};
 	Square(int a, char b, Colour c, Piece* p) :rank(a), file(b), colour(c), piece(p)
 	{
 		//cout << "parametrized Square constructor with " << rank << " " << file << " and " << endl;
 	};
+	//destructor
+	~Square() {};
 	//print funtion
 	void printSquare()
 	{
@@ -129,8 +135,7 @@ public:
 			//piece->print();
 		}
 	}
-	//piece related stuff
-	Piece* piece = nullptr;
+	//piece related functions
 	Piece* getPiece()
 	{
 		return piece;
@@ -146,9 +151,125 @@ public:
 };
 
 class Board {
+private:
+	bool checkRookPath(int fromRank, char fromFile, int toRank, char toFile)
+	{
+		if (fromFile < toFile) //moving to the right
+		{
+			for (int i = (convert(fromFile)) + 1; i < convert(toFile); ++i)
+			{
+				if (board[convert(fromRank)][i].getPiece())
+				{
+					cout << "There is a piece in the way!" << endl;
+					cout << "Invalid move!" << endl;
+					return false;
+				}
+			}
+			return true;
+		}
+		else if (fromFile > toFile) // moving to the left
+		{
+			for (int i = (convert(fromFile)) - 1; i > convert(toFile); --i)
+			{
+				if (board[convert(fromRank)][i].getPiece())
+				{
+					cout << "There is a piece in the way!" << endl;
+					cout << "Invalid move!" << endl;
+					return false;
+				}
+			}
+			return true;
+		}
+		else if (fromRank > toRank) //moving downwards
+		{
+			for (int i = (convert(fromRank)) + 1; i < convert(toRank); ++i)
+			{
+				if (board[i][convert(fromFile)].getPiece())
+				{
+					cout << "There is a piece in the way!" << endl;
+					cout << "Invalid move!" << endl;
+					return false;
+				}
+			}
+			return true;
+		}
+		else if (fromRank < toRank) //moving upwards
+		{
+			for (int i = fromRank - 1; i > toRank; --i)
+			{
+				if (board[i][convert(fromFile)].getPiece())
+				{
+					cout << "There is a piece in the way!" << endl;
+					cout << "Invalid move!" << endl;
+					return false;
+				}
+			}
+			return true;
+		}
+		return false;
+	}
+	bool checkBishopPath(int fromRank, char fromFile, int toRank, char toFile)
+	{
+		if ((toRank > fromRank) && (toFile > fromFile)) //diagonal to top right
+		{
+			for (int i{ 1 }; i < abs(toRank - fromRank); ++i)
+			{
+				if (board[(convert(fromRank + i)) ][(convert(fromFile )+ i) ].getPiece())
+				{
+					cout << "There is a piece in the way!" << endl;
+					cout << "Invalid move!" << endl;
+					return false;
+				}
+			}
+			return true;
+		}
+		else if ((toRank > fromRank) && (toFile < fromFile)) //diagonal to top left
+		{
+			for (int i{ 1 }; i < abs(toRank - fromRank); ++i)
+			{
+				if (board[(convert(fromRank+ i)) ][(convert(fromFile)- i) ].getPiece())
+				{
+					cout << "There is a piece in the way!" << endl;
+					cout << "Invalid move!" << endl;
+					return false;
+				}
+			}
+			return true;
+		}
+		else if ((toRank < fromRank) && (toFile > fromFile)) //diagonal to bottom right
+		{
+			for (int i{ 1 }; i < abs(toRank - fromRank); ++i)
+			{
+				if (board[(convert(fromRank - i))][(convert(fromFile )+ i)].getPiece())
+				{
+					cout << "There is a piece in the way!" << endl;
+					cout << "Invalid move!" << endl;
+					return false;
+				}
+			}
+			return true;
+		}
+		else if ((toRank < fromRank) && (toFile < fromFile)) //diagonal to bottom left
+		{
+			for (int i{ 1 }; i < abs(toRank - fromRank); ++i)
+			{
+				if (board[(convert(fromRank - i))][(convert(fromFile )- i)].getPiece())
+				{
+					cout << "There is a piece in the way!" << endl;
+					cout << "Invalid move!" << endl;
+					return false;
+				}
+			}
+			return true;
+		}
+		return false;
+	}
+	
 public:
 	//8x8 array of squares
 	Square board[8][8];
+	//variable that shows both kings are still alive
+	bool neitherKingIsDead{ true };
 	//inilialize objects for each piece
 	Rook bR1 = Rook(BLACK);
 	Knight bN1 = Knight(BLACK);
@@ -235,10 +356,11 @@ public:
 		board[7][7] = Square(1, 'H', WHITE, &wR2);
 
 	};
+
 	//print method
 	void printBoard() {
 		cout << "  |A |B |C |D |E |F |G |H |" << endl;
-		cout << "  _________________________"<< endl;
+		cout << "  _________________________" << endl;
 		for (int i{ 0 }; i < 8; ++i)
 		{
 			cout << 8 - i << " "; //prints a column of ints(rank)
@@ -251,21 +373,45 @@ public:
 		}
 		cout << "  _________________________" << endl;
 	}
-	//some method to address a square on the board
+
+	//move method
 	void move(int fromRank, char fromFile, int toRank, char toFile)
-	{
-		if (board[convert(fromRank)][convert(fromFile)].getPiece())
+	{	
+		Square* fromLocation = &board[convert(fromRank)][convert(fromFile)];
+		Square* toLocation = &board[convert(toRank)][convert(toFile)];
+		Piece* fromPiece = fromLocation->getPiece();
+		Piece* toPiece = toLocation->getPiece();
+		
+
+		if (fromLocation == toLocation) //check if staring and ending locations are the same
 		{
-			cout << "there is a piece in " << fromRank << fromFile << endl;
-			if (board[convert(toRank)][convert(toFile)].getPiece())
+			cout << " \nInvalid move - you have chosen to move to the same square!" << endl;
+			return;
+		}
+		if (fromPiece) // check if there is a piece on the starting square
+		{
+			//cout << "there is a piece in " << fromRank << fromFile << endl;
+			if (toPiece) //check if there is a piece in the ending square
 			{
-				cout << "BUT there is a piece in " << toRank << toFile << endl;
-				cout << "Invalid move" << endl;
+				if (toPiece->colour == fromPiece->colour) //check if the two pieces are the same colour
+				{
+					cout << "BUT there is a piece in " << toRank << toFile << " with the same colour" << endl;
+					cout << fromPiece->colour<<fromPiece->representation << endl;
+					cout << "You can't attempt that!" << endl;
+					return;
+				}
+				else
+				{
+					validateMove(fromRank, fromFile, toRank, toFile);
+				}
+
 			}
-			else 
+			else
 			{
-				board[convert(toRank)][convert(toFile)].setPiece(board[convert(fromRank)][convert(fromFile)].getPiece());
-				board[convert(fromRank)][convert(fromFile)].clearPiece();
+				validateMove(fromRank, fromFile, toRank, toFile);
+				//executeMove(fromRank, fromFile, toRank, toFile);
+				//board[convert(toRank)][convert(toFile)].setPiece(fromPiece);
+				//board[convert(fromRank)][convert(fromFile)].clearPiece();
 			}
 		}
 		else
@@ -273,110 +419,413 @@ public:
 			cout << "there is NO piece in " << fromRank << fromFile << endl;
 		}
 	}
-	//move method
-};
 
-class Game {
-public:
-	Colour currentPlayer;
-	Board gameBoard;
-
-	//new game - initializes a board
-	//flag of current player
-	//do-while cycle that contains the game
-		// at the end flips the flag
-	void newGame()
+	//check if move is valid according to rules
+	void validateMove(int fromRank, char fromFile, int toRank, char toFile)
 	{
-		currentPlayer = WHITE;
-		while (true)
+		Piece* fromPiece = (board[convert(fromRank)][convert(fromFile)]).getPiece();
+		Piece* toPiece = (board[convert(toRank)][convert(toFile)]).getPiece();
+		switch (fromPiece->representation)
+		{
+			case 'K':
+			{
+				//check to see if the move is legal according to rules
+				if ((((fromRank == toRank) && (abs(fromFile - toFile) == 1)) ||
+					((abs(fromRank - toRank) == 1) && (fromFile == toFile))) ||
+					((abs(toFile - fromFile) == 1) && (abs(toRank - fromRank) == 1)))
+				{
+					cout << "valid vorizontal or vertical or diagonal move by 1 (King)" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+					executeMove(fromRank, fromFile, toRank, toFile);
+				}
+				else {
+					cout << "INVALID vorizontal or vertical or diagonal move by 1 (King)" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+				}
+				break;
+			}
+			case 'Q':
+			{
+				//check to see if the move is legal according to rules
+				if ((((fromRank == toRank) && (fromFile != toFile))
+					|| ((fromRank != toRank) && (fromFile == toFile)))
+					|| (abs(toRank - fromRank) == abs(toFile - fromFile)))
+				{
+					//check if path is clear 
+					if (checkPath(fromRank, fromFile, toRank, toFile))
+					{
+						cout << "valid vorizontal or vertical or diagonal move (QUEEN)" << endl;
+						cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+						executeMove(fromRank, fromFile, toRank, toFile);
+					}
+				}
+				else {
+					cout << "INVALID vorizontal or vertical or diagonal move (QUEEN)" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+				}
+				break;
+			}
+			case 'R':
+			{
+				if (((fromRank == toRank) && (fromFile != toFile))
+					|| ((fromRank != toRank) && (fromFile == toFile)))
+				{
+					//check path is clear
+					if (checkPath(fromRank, fromFile, toRank, toFile))
+					{
+						cout << "valid vorizontal or vertical move (ROOK)" << endl;
+						cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+						executeMove(fromRank, fromFile, toRank, toFile);
+					}
+				}
+				else {
+					cout << "INVALID vorizontal or vertical move (ROOK)" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+				}
+				break;
+			}
+			case 'B':
+			{
+				//check to see if the move is legal according to rules
+				if (abs(toRank - fromRank) == abs(toFile - fromFile))
+				{
+					//check for pieces in the way
+					if (checkPath(fromRank, fromFile, toRank, toFile))
+					{
+						cout << "valid diagonal move (BISHOP)" << endl;
+						cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+						executeMove(fromRank, fromFile, toRank, toFile);
+					}
+				}
+				else {
+					cout << "INVALID diagonal move (BISHOP)" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+					//return false;
+				}
+				break;
+			}
+			case 'N':
+			{
+				//check to see if the move is legal according to rules
+				if (((abs(toRank - fromRank) == 2) && (abs(toFile - fromFile) == 1))
+					|| ((abs(toRank - fromRank) == 1) && (abs(toFile - fromFile) == 2)))
+				{
+					cout << "Valid L-shaped kNight move" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+					executeMove(fromRank, fromFile, toRank, toFile);
+				}
+				else {
+					cout << "INVALID L-shaped kNight move" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+				}
+				break;
+			}
+			case 'P': //special movement for pawn
+			{
+				//single move forward
+				if (((toFile == fromFile) && (fromPiece->colour == WHITE) && (toRank == fromRank + 1) && (!toPiece))
+					|| ((toFile == fromFile) && (fromPiece->colour == BLACK) && (toRank == fromRank - 1) && (!toPiece)))
+				{
+					cout << "Valid single move (PAWN)" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+					executeMove(fromRank, fromFile, toRank, toFile);
+
+				}
+				//double move forward
+				else if (((toFile == fromFile) && (fromPiece->colour == WHITE) && (toRank == 4) &&
+						(!toPiece) && ((board[convert(toRank - 1)][convert(toFile)]).getPiece() == nullptr))
+						|| 
+						((toFile == fromFile) && (fromPiece->colour == BLACK) && (toRank == 5) &&
+						(!toPiece) && ((board[convert(toRank + 1)][convert(toFile)]).getPiece() == nullptr)))
+				{
+					cout << "Valid double move (PAWN)" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+					executeMove(fromRank, fromFile, toRank, toFile);
+				}
+				//capture move
+				else if (((toPiece) && ((toFile == fromFile - 1) || (toFile == fromFile + 1)) && 
+						(fromPiece->colour == WHITE) && (toRank == fromRank+1)) 
+						||
+						((toPiece) && ((toFile == fromFile - 1) || (toFile == fromFile + 1)) && 
+						(fromPiece->colour == BLACK) && (toRank == fromRank - 1)))
+				{
+					cout << "Valid capture move (PAWN)" << endl;
+
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+					executeMove(fromRank, fromFile, toRank, toFile);
+				}
+				//if time permits ENPASANT MOVE goes here//else if ()...
+				else {
+					cout << "INVALID move (PAWN)" << endl;
+					cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+					}
+				break;
+			}
+			default:
+			{
+				cout << "INVALID selection - representation character not recognized" << endl;
+			}
+		}
+
+	}
+
+	//check to see if path is clear
+	bool checkPath(int fromRank, char fromFile, int toRank, char toFile)
+	{
+		Piece* fromPiece = board[convert(fromRank)][convert(fromFile)].getPiece();
+		Piece* toPiece = board[convert(toRank)][convert(toFile)].getPiece();
+		Square* fromLocation = &board[convert(fromRank)][convert(fromFile)];
+		Square* toLocation = &board[convert(toRank)][convert(toFile)];
+
+		switch (fromPiece->representation)
+		{
+
+		case 'Q':
+		{
+			//check for type of movement before applying check for pieces in the path
+			//check for diagonal mocement
+			if (abs(toRank - fromRank) == abs(toFile - fromFile))
+			{
+				return  checkBishopPath(fromRank, fromFile, toRank, toFile);
+			}
+			//otherwise its vertical / horizontal movement
+			else {
+				return checkRookPath(fromRank, fromFile, toRank, toFile);
+			}
+		}
+		case 'R':
+		{
+			return checkRookPath(fromRank, fromFile, toRank, toFile);
+		}
+		case 'B':
+		{
+			return checkBishopPath(fromRank, fromFile, toRank, toFile);
+		}
+		case 'P':
+		{
+		}
+		default:
 		{
 
 		}
+		}
+	}
 
+	//EXECUTE MOVE METHOD AND CHECK IF A KING JUST DIED
+	void executeMove(int fromRank, char fromFile, int toRank, char toFile)
+	{
+		Piece* fromPiece = (board[convert(fromRank)][convert(fromFile)]).getPiece();
+		Piece* toPiece = (board[convert(toRank)][convert(toFile)]).getPiece();
 
+		if (toPiece)
+		{
+			if (toPiece->representation == 'K')
+			{
+				neitherKingIsDead = false;
+				cout << "King " << toPiece->colour << toPiece->representation << " is dead!" << endl;
+				cout << "Game Over!" << endl;
+			}
+		}
+
+		board[convert(toRank)][convert(toFile)].setPiece(fromPiece);
+		//board[convert(toRank)][convert(toFile)].setPiece(board[convert(fromRank)][convert(fromFile)].getPiece());
+		board[convert(fromRank)][convert(fromFile)].clearPiece();
+		
 	}
 
 };
 
+class Game {
+	public:
+		Colour currentPlayer;
+		Board gameBoard;
+
+		//new game - initializes a board
+		//flag of current player
+		//while cycle that contains the game
+			// at the end flips the flag
+		void startGame()
+		{
+			currentPlayer = WHITE;
+
+			while (gameBoard.neitherKingIsDead)
+			{
+				cout << "\n---------------------------------"<< endl;
+				cout << endl;
+				gameBoard.printBoard();
+				input();
+			}
+		}
+		//input function
+		void input()
+		{
+			int fromRank{};
+			char fromFile{};
+			int toRank{};
+			char toFile{};
+			//explanation what to do
+			cout << "\ncurrent player is :" << translateColour(currentPlayer) << endl;
+			cout << "\nfrom: ";
+			cin >> fromRank >> fromFile;
+			cout << " \nto: ";
+			cin >> toRank >> toFile;
+
+			if (fromRank > 0 && fromRank < 9)
+			{
+				if (toRank > 0 && toRank < 9)
+				{
+					if (fromFile >= 'A' && fromFile <= 'H')
+					{
+						if (toFile >= 'A' && toFile <= 'H')
+						{
+							//check if the player colour corresponds to the piece colour
+							
+							Piece* fromPiece = (gameBoard.board[convert(fromRank)][convert(fromFile)]).getPiece();	
+							if(fromPiece)
+							{
+								if (fromPiece->colour == this->currentPlayer)
+								{
+									gameBoard.move(fromRank, fromFile, toRank, toFile);
+									alternate(this->currentPlayer);
+								}
+								else {
+									cout << "\nYou're trying to move another player's pieces!" << endl;
+									cout << "Invalid move" << endl;
+								}
+							}
+							else
+							{
+								cout << "in \"From: \" You must choose a square that contains a piece that belongs to you!\nIt appears that you've entered an empty square" << endl;
+							}
+							
+							
+						}
+						else {
+							cout << "\nPlease make sure that you are typing characters A to H" << endl;
+						}
+					}
+					else {
+						cout << "\nPlease make sure that you are typing characters A to H" << endl;
+					}
+				}
+				else {
+					cout << "\nPlease make sure that you are typing integers 1 to 8" << endl;
+				}
+			}
+			else {
+				cout << "\nPlease make sure that you are typing integers 1 to 8" << endl;
+			}
+		}
+
+
+	};
+
 
 int main() {
-
-	Board b;
-	b.printBoard();
-	b.board[7][0].clearPiece();
-	b.board[7][1].clearPiece();
-	b.printBoard();
-	
-	b.move(8,'A',4,'A');
-	b.printBoard();
+	Game g;
+	cout << "********************************************************" << endl;
+	cout << " Please enter your move in the following pattern: " << endl;
+	cout << "\t1. Input your staring address into 'From' \n\t2. Use an integer from 1 to 8 for row number A.K.A. 'Rank'\n\t3. Use a CAPITAL LETTER for  column A.K.A 'File'\n\tEXAMPLE: \n\tFrom: 2D\n\tTo: 4D\n\t\tor\n\tFrom: 2 D\n\tTo:4 D" << endl;
+	cout << "********************************************************" << endl;
+	cout << "Be aware that if you use an illegal move - you wont get a redo\nyou'll lose your turn as in real chess" << endl;
+	cout << "********************************************************" << endl;
+	cout << "Notice that the game crashes if you enter a LETTER or OTHER CHARACTER first.\nI cant figure out why, so I'm sorry for the inconvenience. " << endl;
+	g.startGame();
 	return 0;
-}
+	}
 
-//Hvarchashti funkcii
-void alternate(Colour& c)
-{
-	if (c == WHITE)
+	//Hvarchashti funkcii
+	void alternate(Colour& c)
 	{
-		c = BLACK;
-	}
-	else {
-		c = WHITE;
-	}
-}
-char numberToCharConvertor(int a)
-{
-	if (a == 0) {
-		return 'w';
-	}
-	else {
-		return 'b';
-	}
-}
-int convert(int a)
-{
-	switch (a)
-	{
-	case 8: return 0;
-		break;
-	case 7: return 1;
-		break;
-	case 6: return 2;
-		break;
-	case 5: return 3;
-		break;
-	case 4: return 4;
-		break;
-	case 3: return 5;
-		break;
-	case 2: return 6;
-		break;
-	case 1: return 7;
-		break;
-	}
-}
-int convert(char a)
-{
-	switch(a)
-	{
-	case 'A': return 0; 
-		break;
-	case 'B': return 1;
-		break;
-	case 'C': return 2;
-		break;
-	case 'D': return 3;
-		break;
-	case 'E': return 4;
-		break;
-	case 'F': return 5;
-		break;
-	case 'G': return 6;
-		break;
-	case 'H': return 7;
-		break;
+		if (c == WHITE)
+		{
+			c = BLACK;
 		}
-}
-
+		else {
+			c = WHITE;
+		}
+	}
+	char numberToCharConvertor(int a)
+	{
+		if (a == 0) {
+			return 'w';
+		}
+		else {
+			return 'b';
+		}
+	}
+	int convert(int a)
+	{
+		if (a >= 1 && a <= 8)
+			return 8 - a;
+		/*switch (a)
+		{
+		case 8: return 0;
+			break;
+		case 7: return 1;
+			break;
+		case 6: return 2;
+			break;
+		case 5: return 3;
+			break;
+		case 4: return 4;
+			break;
+		case 3: return 5;
+			break;
+		case 2: return 6;
+			break;
+		case 1: return 7;
+			break;
+		}*/
+	}
+	int convert(char a)
+	{
+		switch (a)
+		{
+		case 'A': return 0;
+			break;
+		case 'B': return 1;
+			break;
+		case 'C': return 2;
+			break;
+		case 'D': return 3;
+			break;
+		case 'E': return 4;
+			break;
+		case 'F': return 5;
+			break;
+		case 'G': return 6;
+			break;
+		case 'H': return 7;
+			break;
+		}
+	}
+	bool canMoveBishop(int fromRank, char fromFile, int toRank, char toFile)
+	{
+		if (abs(toRank - fromRank) == abs(toFile - fromFile)) {
+			cout << "valid diagonal move" << endl;
+			cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+			return true;
+		}
+		else {
+			cout << "INVALID diagonal move" << endl;
+			cout << fromRank << fromFile << " to " << toRank << toFile << endl;
+			return false;
+		}
+		/*cout << "from: " << fromRank << fromFile << "to: " << toRank << toFile << endl;
+		cout << "abs(toRank"<<toRank<<" - fromRank"<<fromRank<<") = " << abs(toRank - fromRank) << endl;
+		cout << "abs(toFile"<<toFile<<" - fromFile"<<fromFile<<") = " << abs(toFile - fromFile) << endl;
+		cout << endl;*/
+	}
+	string translateColour(Colour c)
+	{
+		if (c == 0)
+			return "WHITE";
+		if (c == 1)
+			return "BLACK";
+		else
+			return "UNKNOWN";
+	}
 
 
 
